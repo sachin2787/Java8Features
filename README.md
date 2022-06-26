@@ -20,11 +20,15 @@ Java 8 Features:
 ---------------------------------------------
 What is Lambda expression?
 ----------------------------
-It is an anonymous function
+-It is an anonymous function
+
     Nameless
     without return type
     without modifiers
 
+
+How to write lambda expression?
+----------------------------------
 Eg.
 
 public void m1() {
@@ -57,15 +61,20 @@ public in squareIt(int n) {
 
 same as
 
-(int n) -> return n * n;
+(int n) -> {return n * n;}
 (int n) -> n * n;
 n -> n * n;
+
+without curly braces we cannot use return keyword
+within curly braces if we want to return some value compulsory we should use return statement.  
 
 ---------------------------------------------------------
 
 Functional Interface
 ---------------------
     - interface contains sinle abstract method (SAM)
+    - it can have any number if default methods and static methods
+    - @FunactionalInterface
 eg.
 Runnable    => run()
 Comparable  => compareTo()
