@@ -16,3 +16,47 @@ Java 8 Features:
 7. Date and Time API
 8. Optional class
 9. Nashorn Javascript engine
+
+---------------------------------------------
+What is Lambda expression?
+----------------------------
+It is an anonymous function
+    Nameless
+    without return type
+    without modifiers
+
+Eg.
+
+public void m1() {
+    System.out.println("Hello");
+}
+
+same as
+
+() ->  System.out.println("Hello");
+
+-----------------------------------------
+
+eg 2
+
+public void m1(int a, int b) {
+    System.out.println(a+b);
+}
+
+same as
+
+(a, b) -> System.out.println(a+b);
+
+----------------------------------------------
+
+eg3
+
+public in squareIt(int n) {
+    return n * n ;
+}
+
+same as
+
+(int n) -> return n * n;
+(int n) -> n * n;
+n -> n * n;
