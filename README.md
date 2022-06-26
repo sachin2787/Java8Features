@@ -60,3 +60,15 @@ same as
 (int n) -> return n * n;
 (int n) -> n * n;
 n -> n * n;
+
+---------------------------------------------------------
+
+Functional Interface
+---------------------
+    - interface contains sinle abstract method (SAM)
+eg.
+Runnable    => run()
+Comparable  => compareTo()
+Comparator  => compare()
+ActionListener  => actionPerformed()
+Callable    => call()
