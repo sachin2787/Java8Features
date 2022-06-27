@@ -81,3 +81,98 @@ Comparable  => compareTo()
 Comparator  => compare()
 ActionListener  => actionPerformed()
 Callable    => call()
+
+--------------------------------------------------------
+
+Anonymous inner class:
+--------------------------------
+    -can extend a normal class
+    - can extend a abstract class
+    - can implement an interface which contains any number of abstract class
+
+Lambda expression can implement an interface which contains a single abstract method (Functional interface)
+
+Anonymous inner class != Lambda expression
+
+Anonymous inner class > Lambda expression
+
+-----------------------------------------------------------------------
+
+Default Methods:
+-----------------------------------------
+until java 1.7-
+Every method present inside interface is always: public and abstract
+
+Related methods:
+1.8 V: default methods + static methods
+1.9 v: private methods
+
+
+Interface Variables:
+-------------------------
+
+public static final
+
+--------------------------------------------------
+
+Default method == Virtual extensions method == defender method:
+--------------------------------------------------------------
+
+Without effecting implementation classes if we want to add new method to interface  
+
+----------------------------------------------------------------------------
+
+
+class vs interface:
+=====================
+
+----------------------------------------------
+
+static method:
+--------------
+
+From 1.8 v we can write static method in interface
+to define general utility methods inside interface
+
+---------------------------------------------------------
+
+Predefined Functional Interfaces:
+----------------------------------
+
+https://docs.oracle.com/javase/8/docs/api/java/util/function/package-summary.html
+
+1. Predicate
+2. Function
+3. Consumer
+4. Supplier
+
+Two argument predefined functional interfaces:
+
+1. BiPredicate
+2. BiFunction
+3. BiConsumer
+
+Primitive Functional Interfaces:
+
+1. IntPredicate
+2. IntFunction
+3. IntConsumer
+
+----------------------------------------------
+
+Predicate:
+-----------
+    -conditional check
+
+    @FunctionalInterface
+    public interface Predicate<T>() {
+        boolean test(T t);
+    }
+
+Predicate joining:
+
+p1.or(p2)
+p1.and(p2)
+p1.negate()
+
+----------------------------------------
