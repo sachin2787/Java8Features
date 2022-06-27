@@ -164,15 +164,76 @@ Predicate:
 -----------
     -conditional check
 
+take some input and perform some conditional check and returns boolean value
+
     @FunctionalInterface
-    public interface Predicate<T>() {
+    public interface Predicate<T> {
         boolean test(T t);
     }
 
-Predicate joining:
+    Eg.
+    Predicate<Integer> t = i -> i % 2 == 0;
+    System.out.println(t.test(10));
+    System.out.println(t.test(13));
+    System.out.println(t.test(500));
+    Predicate joining:
 
 p1.or(p2)
 p1.and(p2)
 p1.negate()
 
 ----------------------------------------
+
+Function:
+---------
+take some input and perform some operation and return the result which is need not be boolean type
+
+Interface Function<T,R>
+Type Parameters:
+T - the type of the input to the function
+R - the type of the result of the function
+
+    @FunctionalInterface
+    public interface Function<T,R>
+
+    Represents a function that accepts one argument and produces a result.
+    This is a functional interface whose functional method is apply(Object).
+
+     Function<Integer, Integer> f = i -> i * i;
+     System.out.println(f.apply(5));
+     System.out.println(f.apply(9));
+
+Function chaining:
+
+f1.andThen(f2).apply(i)
+f1.compose(f2).apply(i)
+
+-----------------------------------------------------------
+
+Consumer:
+----------
+
+Accept some input and perform required operation and not required to return anything
+
+    @FunctionalInterface
+    public interface Consumer<T> {
+        void accept(T t);
+    }
+
+Represents an operation that accepts a single input argument and returns no result. Unlike most other functional interfaces, Consumer is expected to operate via side-effects.
+    
+    Eg.
+    Consumer<String> c = s -> System.out.println(s);
+    c.accept("Sachin");
+    c.accept("Monika");
+
+-------------------------------------------------------------
+
+Supplier:
+---------
+
+Just supply my required objects and it won't take any input
+
+    interface Supplier<R>  {
+        public R get();
+    }
